@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Cines Donosti</title>
+</head>
+<script type="text/javascript">
+
+	var dia = prompt("Que dia quieres ir al cine?");
+	var edad = prompt("Cuantos años tienes?"); 
+
+	switch(dia){
+
+		case 'lunes': 
+			if(edad <= 35){
+				document.write('2€');
+			}else{
+				document.write('5€');
+			}
+		break;
+		case 'martes':
+			if(edad <= 25){
+				document.write('2€')
+			}else if( edad > 25 || edad <= 50){
+				document.write('5€');
+			}else{
+				document.write('8€');
+			}
+		break;
+		case 'miercoles':
+			if(edad <= 18){
+				document.write('3€');
+			}else if(edad > 18 || edad <= 50){
+				document.write('5€');
+			}else{
+				document.write('8€');
+
+			}
+		break; 
+		case 'jueves': 
+			if(edad <= 18){
+				document.write('5€');
+			}else if( edad > 18 || edad <= 50){
+				document.write('5€');
+			}else{
+				document.write('8€');
+			}
+		break;
+		case 'viernes':
+			document.write('10€');
+		break;
+		case 'sabado':
+			document.write('10€');
+		break;
+		case 'domingo': 
+			document.write('10€');
+		break;
+	}
+</script>
+</html>
