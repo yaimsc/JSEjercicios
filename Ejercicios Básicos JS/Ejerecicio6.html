@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 6</title>
+	<script type="text/javascript">
+		
+		var frase = prompt("Introduce una frase");
+
+		var expresion = (/[AaEeIiOoUu]/gi);
+
+		var caracteres = frase.match(expresion); 
+
+		var contador_caracteres = frase.match(expresion).length; 
+
+		document.write(caracteres); 
+
+		document.write("<br>" + " En la frase hay " + contador_caracteres + " caracteres");   
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
