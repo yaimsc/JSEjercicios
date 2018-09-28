@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejericico 10</title>
+	<script type="text/javascript">
+		var num1 = parseInt(prompt("Escribe un número"));
+		var num2 = parseInt(prompt("Escribe otro número"));
+		var menor;
+		var i;
+
+		if (num1 < num2) {
+			menor = num1;
+		} else {
+			menor = num2;
+		}
+		for (i=2; i < menor / 2; i++) {
+			if (num1 % i === 0 && num2 % i === 0) {
+				document.write("Los divisores comunes de los dos numeros son: " + i + ", ");
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
