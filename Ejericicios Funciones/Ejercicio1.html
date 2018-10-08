@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejericico1</title>
+	<script type="text/javascript">
+
+		function calcularNum(){
+
+			var string = prompt("Escribe una frase"); 
+		
+			var numLetras = string.length; 
+
+			document.write("El numero de las letras es: " + numLetras + "<br>"); 
+
+			var regexMay = /[A-Z]/g; 
+
+			var letrasMayus = string.match(regexMay); 
+
+			var contador_letrasMayus = letrasMayus.length; 
+
+			document.write("La frase tiene " + contador_letrasMayus + " mayusculas<br>"); 
+
+			var regexMin = /[a-z]/g; 
+
+			var letrasMin = string.match(regexMin);
+
+			var contador_letrasMin = letrasMin.length; 
+
+			document.write("la frase tiene " + contador_letrasMin + " minusculas<br>"); 
+
+		}
+		
+		calcularNum(); 
+	</script>
+</head>
+<body>
+</body>
+</html>

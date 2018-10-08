@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5</title>
+	<script type="text/javascript">
+		var string = prompt("Dime una frase o palabra");
+
+		var alreves = " ";
+
+		for(var i = string.length -1; i >= 0; i--){
+			alreves += string[i]; 
+		}
+
+		document.write(alreves); 
+
+		if(alreves == string){
+			document.write("Es polimero");
+		}else{
+			document.write("No es polimero"); 
+		}
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
