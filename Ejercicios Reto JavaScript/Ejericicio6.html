@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 6</title>
+	<script type="text/javascript">
+		var radio = prompt("Introduce el valor del radio"); 
+		var diametro = radio*2;
+		var pi = Math.PI;  
+		var circunferencia = diametro*pi; 
+		var areaCirculo = pi*(radio ** 2);  
+		var areaEsfera = ((radio ** 2)*4)*pi; 
+		var volumenEsfera = 4*pi*(radio ** 3)/3; 
+
+		document.write("El valor del radio: " + radio + "<br>");
+		document.write("El valor del diametro: " + diametro + "<br>");
+		document.write("El valor del perimetro de la circunferencia: " + Math.round(circunferencia * 100)/100 + " cm<br>");
+		document.write("El valor del area del circulo: " + Math.round(areaCirculo * 100)/100 + " cm2<br>"); 
+		document.write("El valor del area de la esfera: " + Math.round(areaEsfera * 100)/100 + " m2<br>");
+		document.write("El valor del volumen de la esfera: " + Math.round(volumenEsfera * 100)/100 + " cm3"); 
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
