@@ -14,6 +14,9 @@
 				case '3':
 					redondeo();
 				break; 
+				case '4':
+					trigonometria();
+				break; 
 			}
 		}
 
@@ -37,7 +40,12 @@
 		}
 
 		function trigonometria(){
-			
+			var angulo = prompt("Dime un angulo entre 0 o 360"); 
+
+			document.write("Seno: " + Math.sin(angulo) + "<br>");
+			document.write("Coseno: " + Math.cos(angulo) + "<br>"); 
+			document.write("Tangente: " + Math.tan(angulo)); 
+
 		}
 	</script>
 </head>
