@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejericicio 4</title>
+	<script type="text/javascript">
+
+		function mostrarHora(formato){
+			var horaF = new Date(); 
+			console.log(horaF.toLocaleTimeString('en-US')); 
+			console.log(formato); 
+			switch(formato){
+				case '1':  
+					document.getElementById("formato").innerHTML = horaF.getHours() + ':' + horaF.getMinutes() + ':' + horaF.getSeconds();
+				break;
+				case '2': 
+					document.getElementById("formato").innerHTML = horaF.toLocaleTimeString('en-US'); 
+				break; 
+			}
+		}
+		
+
+
+
+	</script>
+</head>
+<body>
+<form>
+<select name="formato">
+  <option value="1">14:35:07</option>
+  <option value="2">02:35:07 PM/AM</option> 
+</select>
+<input type="button" name="enviar" value="enviar" onclick="mostrarHora(formato.value)">
+</form>
+<p>Hora elegida</p>
+<p id="formato"></p>
+</body>
+</html>

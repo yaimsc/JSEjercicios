@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejericicio 5</title>
+	<script type="text/javascript">
+		function menu(funcion){
+			switch(funcion){
+				case '1':
+					potencia();
+				break;
+				case '2': 
+					raiz();
+				break; 
+				case '3':
+					redondeo();
+				break; 
+			}
+		}
+
+		function potencia(){
+			var base = prompt("Dime una base para la potencia");
+			var exponente = prompt("dime a que estara elevada la potencia(exponente)");
+
+			document.write("La potencia de " + base + " elevado a " + exponente + " es: " + base ** exponente); 
+		}
+
+		function raiz(){
+			var raiz = prompt("Introduce un numero");
+
+			document.write("La raiz cuadrada de " + raiz + " es: " + raiz*raiz); 
+		}
+
+		function redondeo(){
+			var decimal = prompt("Introduce un numero decimal"); 
+
+			document.write("El redondeo es de " + decimal + " es: " + Math.round(decimal)); 
+		}
+
+		function trigonometria(){
+			
+		}
+	</script>
+</head>
+<body>
+	<h1>Elige</h1>
+	<form>
+		<select name="funcion">
+			<option value="1">1. Potencia</option>
+			<option value="2">2. Raíz</option>
+			<option value="3">3. Redondeo</option>
+			<option value="4">4. Trigonometría</option>
+		</select>
+		<input type="button" name="enviar" value="enviar" onclick="menu(funcion.value)">
+	</form>
+</body>
+</html>
