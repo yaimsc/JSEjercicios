@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio ea1</title>
+	<script type="text/javascript">
+		nombreCliente = ["laura", "alvaro", "igor", "ivan", "mónica", "javi", "david", "josé luis"]; 
+		localidad = ["santander", "castro", "castro", "santander", "zamora", "bilbao", "bilbao", "bilbao"]; 
+		cuota = [50,50,60,40,30,30,50,60]; 
+
+		function menuLlamada(menu){
+			switch(menu){
+				case '1': 
+					mostrarTodo(); 
+				break; 
+			}
+		}
+
+		function mostrarTodo(){
+			for (var i = nombreCliente.length - 1; i >= 0; i--) {
+				document.write(nombreCliente[i] + ",");
+				document.write(localidad[i] + ","); 
+				document.write(cuota[i] + "<br>"); 
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	<form>
+	<select name="menu">
+	  <option value="1">Mostar todo</option>
+	  <option value="2">Usuarios de provincia</option> 
+	  <option value="3">Usuarios que tengan una cuota mayor o menor que un valor</option>
+	</select>
+	<input type="button" name="enviar" value="enviar" onclick="menuLlamada(menu.value)">
+	</form>
+
+</body>
+</html>
