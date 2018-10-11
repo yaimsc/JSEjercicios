@@ -3,9 +3,21 @@
 <head>
 	<title>Ejercicio 7</title>
 	<script type="text/javascript">
-		var numero = parseInt(prompt("Dime un nuemro")); 
+		var numero = parseInt(prompt("Dime un numero")); 
+		console.log(numero); 
 
-		var exponencial = Math.exp(nuemro); 
+		var exponencial = Math.exp(numero); 
+		var decimales = parseFloat(numero).toFixed(4); 
+		var binario = numero.toString(2); 
+		var octal = numero.toString(8); 
+		var hexadecimal = numero.toString(16); 
+
+		document.write("El exponencial de " + numero + " es: " + exponencial + "<br>"); 
+		document.write("El decimal de " + numero + " es: " + decimales + "<br>"); 
+		document.write("El numero binario de " + numero + " es: " + binario + "<br>"); 
+		document.write("El numero octal de " + numero + " es: " + octal + "<br>"); 
+		document.write("El numero hexadecimal de " + numero + " es: " + hexadecimal + "<br>"); 
+
 	</script>
 </head>
 <body>
