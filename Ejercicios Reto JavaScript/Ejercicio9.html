@@ -6,12 +6,16 @@
 	<script type="text/javascript">
 		nombreCliente = ["laura", "alvaro", "igor", "ivan", "mónica", "javi", "david", "josé luis"]; 
 		localidad = ["santander", "castro", "castro", "santander", "zamora", "bilbao", "bilbao", "bilbao"]; 
+		provincia = ["cantabria", "cantabria", "cantabria", "cantabria", "zamora", "vizcaya", "vizcaya", "vizcaya"]; 
 		cuota = [50,50,60,40,30,30,50,60]; 
 
 		function menuLlamada(menu){
 			switch(menu){
 				case '1': 
 					mostrarTodo(); 
+				break; 
+				case '2': 
+					usuariosProvincia(); 
 				break; 
 			}
 		}
@@ -22,7 +26,25 @@
 				document.write(localidad[i] + ","); 
 				document.write(cuota[i] + "<br>"); 
 			}
+		}
 
+		function usuariosProvincia(){
+			var prov = prompt("Dime una provincia"); 
+			for(var i = 0; i <= provincia.length; i++){
+				if(prov == provincia[i]){
+					document.write(nombreCliente[i] + "," + cuota[i] + "<br>"); 
+				}
+			}
+		}
+
+		function valorMenorMayor(){
+			var valor = parseInt(prompt("Dime un valor"));
+			for(var i = 0; i <= cuota.length; i++){
+				if(valor < cuota[i]){
+					
+				}
+
+			}
 		}
 
 	</script>
