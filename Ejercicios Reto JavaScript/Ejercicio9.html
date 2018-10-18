@@ -17,6 +17,9 @@
 				case '2': 
 					usuariosProvincia(); 
 				break; 
+				case '3':
+					valorMenorMayor(); 
+				break;
 			}
 		}
 
@@ -33,6 +36,8 @@
 			for(var i = 0; i <= provincia.length; i++){
 				if(prov == provincia[i]){
 					document.write(nombreCliente[i] + "," + cuota[i] + "<br>"); 
+				}else{
+					document.write("Ningún cliente es de esa provincia"); 
 				}
 			}
 		}
@@ -41,7 +46,7 @@
 			var valor = parseInt(prompt("Dime un valor"));
 			for(var i = 0; i <= cuota.length; i++){
 				if(valor < cuota[i]){
-					
+					document.write(nombreCliente[i] + "," + cuota[i] + "<br>"); 
 				}
 
 			}
