@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Proyecto tema 2 - Utilidades </title>
+	<script src="imc.js"></script>
+	<script src="fcm.js"></script>
 	<style type="text/css">
 		#navbar {
 			width: 100%;
@@ -12,13 +14,15 @@
 		ul li a{
 			text-decoration: none;
 			text-transform: uppercase;
-			color: lightblue;
+			color: #3c3c3b;
 		}
 		ul{
 			list-style: none; 
 		}
 		ul li{
-			text-align: center; 
+			display: inline;
+			margin-left: 10%; 
+
 		}
 	</style>
 </head>
@@ -26,7 +30,11 @@
 	<div id="container">
 		<div id="navbar">
 			<ul>
-				<li><a href="utilidades.html">Utilidades</a></li>
+				<li><a href="utilidades.html">Inicio</a></li>
+				<li><a href="javascript:imc()">Calculadora IMC</a></li>
+				<li><a href="javascript:fcm()">Calculadora FCM</a></li>
+				<li><a href="">Calculadora de categoria</a></li>
+				<li><a href="">Horario</a></li>
 			</ul>
 		</div>
 	</div>
