@@ -25,7 +25,7 @@
     <form class="" action="" method="post" id="form">
       <fieldset>
       <div class="form-group">
-      <label>NIF</label>
+      <label>NIF (sin letra)</label>
       <input  class="form-control" type="text" name="nif" placeholder="nif" required>
       </div>
       <br />
@@ -65,7 +65,7 @@
       <div class="form-group col-md-4">
       <label for="municipio">Municipio</label>
         <select id="municipio" class="form-control" required disabled>
-          <option>San Sebastian</option>
+          <option>Otros..</option>
           <option>Renteria</option>
           <option>Lezo</option>
           <option>Pasajes</option>
@@ -91,6 +91,31 @@
         }
       }
 
+    $("document").ready(function(){
+      $("#cdpostal").keyup(function(){
+        let cdpostal = $("#cdpostal").val();
+        switch (cdpostal) {
+          case '20100':
+            $("#municipio").val("Renteria");
+            break;
+          case '20110':
+            $("#municipio").val("Pasajes");
+            break;
+          case '20300':
+            $("#municipio").val("Irun");
+            break;
+          case '20800':
+            $("#municipio").val("Zarautz");
+            break;
+          case '20750':
+            $("#municipio").val("Zumaia");
+          default:
+            $("#municipio").val("Otros..");
+        }
+      });
+    });
+
+
       // just for the demos, avoids form submit
     jQuery.validator.setDefaults({
       debug: true,
@@ -100,8 +125,9 @@
       rules: {
         nif: {
           required: true,
-          minlength: 9,
-          maxlength: 9
+          minlength: 8,
+          maxlength: 8,
+          number: true
         },
         nombre: {
           required: true,
@@ -127,7 +153,8 @@
         postal: {
           maxlength: 5,
           minlength: 5,
-          required: true
+          required: true,
+          number: true
         },
         municipio: {
           required: true,
